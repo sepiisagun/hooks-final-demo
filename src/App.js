@@ -2,6 +2,7 @@
 // pages
 import NavBar from './components/NavBar';
 import Homepage from './pages/Homepage';
+import UseCallBack from './pages/useCallback';
 import UseMemo from './pages/useMemo';
 import UseReducer from './pages/useReducer';
 import UseRef from './pages/useRef';
@@ -19,6 +20,8 @@ function App() {
         return <UseRef />;
       case '/memo':
         return <UseMemo />;
+      case '/callback':
+        return <UseCallBack />;
 			default:
 				return <Homepage />;
 		}
