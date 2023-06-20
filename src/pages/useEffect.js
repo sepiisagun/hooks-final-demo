@@ -1,11 +1,12 @@
 import React, { useEffect, useReducer, useState } from 'react';
 
 function Reducer(state, action) {
+	// this is for incrementing the progress bar
 	switch (action) {
 		case 'plus':
 			let maxWidth = state.width;
 			if (maxWidth < 1300) {
-				maxWidth += 130;
+				maxWidth += 162.5;
 			}
 			return { width: maxWidth };
 		default:
@@ -18,11 +19,11 @@ function UseEffect() {
 	const [color, setColor] = useState([]);
 
 	useEffect(() => {
-		if (state.width === 390) {
+		if (state.width === 325) {
 			setColor([...color, 'btn-secondary']);
 		} else if (state.width === 650) {
 			setColor([...color, 'btn-primary']);
-		} else if (state.width === 1040) {
+		} else if (state.width === 975) {
 			setColor([...color, 'btn-success']);
 		} else if (state.width === 1300) {
 			setColor([...color, 'btn-danger']);
