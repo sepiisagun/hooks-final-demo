@@ -20,7 +20,9 @@ function CallBackPage({ type }) {
 
 	return (
 		<div className="container" style={theme}>
-			<label>{type}</label>
+			<h>Uses {type} Function</h>
+			<div className='container'>
+
 			<input
 				type="number"
 				value={number}
@@ -35,6 +37,7 @@ function CallBackPage({ type }) {
 				}
 				type={type}
 			/>
+			</div>
 		</div>
 	);
 }
@@ -42,8 +45,14 @@ function CallBackPage({ type }) {
 function UseCallBack() {
 	return (
 		<div className="container">
-			<CallBackPage type="Callback" />
-			<CallBackPage type="Regular" />
+			<div className="row">
+				<div className="col">
+					<CallBackPage type="Callback" />
+				</div>
+				<div className="col">
+					<CallBackPage type="Regular" />
+				</div>
+			</div>
 		</div>
 	);
 }
