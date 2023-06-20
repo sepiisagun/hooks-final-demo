@@ -35,6 +35,52 @@ function UseEffect() {
 			<div className="card">
 				<div className="card-body">
 					<h1>useEffect Demo</h1>
+					<div class="progress-stacked br">
+						<div
+							class="progress"
+							role="progressbar"
+							aria-label="Segment one"
+							aria-valuenow="15"
+							aria-valuemin="0"
+							aria-valuemax="100"
+							style={{ width: '390px' }}
+						>
+							<div class="progress-bar bg-secondary"></div>
+						</div>
+						<div
+							class="progress"
+							role="progressbar"
+							aria-label="Segment two"
+							aria-valuenow="30"
+							aria-valuemin="0"
+							aria-valuemax="100"
+							style={{ width: '390px' }}
+						>
+							<div class="progress-bar bg-primary"></div>
+						</div>
+						<div
+							class="progress"
+							role="progressbar"
+							aria-label="Segment three"
+							aria-valuenow="20"
+							aria-valuemin="0"
+							aria-valuemax="100"
+							style={{ width: '390px' }}
+						>
+							<div class="progress-bar bg-success"></div>
+						</div>
+						<div
+							class="progress"
+							role="progressbar"
+							aria-label="Segment three"
+							aria-valuenow="20"
+							aria-valuemin="0"
+							aria-valuemax="100"
+							style={{ width: '390px' }}
+						>
+							<div class="progress-bar bg-danger"></div>
+						</div>
+					</div>
 					<div
 						className="progress"
 						role="progressbar"
@@ -45,7 +91,7 @@ function UseEffect() {
 						style={{ height: '48px' }}
 					>
 						<div
-							className="progress-bar"
+							className="progress-bar progress-bar-striped progress-bar-animated"
 							style={{ width: state.width }}
 						></div>
 					</div>
