@@ -3,6 +3,7 @@
 import NavBar from './components/NavBar';
 import Homepage from './pages/Homepage';
 import UseReducer from './pages/useReducer';
+import UseRef from './pages/useRef';
 import UseSate from './pages/useState';
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
 				return <UseSate />;
 			case '/reducer':
 				return <UseReducer />;
+      case '/ref':
+        return <UseRef />;
 			default:
 				return <Homepage />;
 		}
