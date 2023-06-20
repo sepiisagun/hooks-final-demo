@@ -2,6 +2,7 @@
 // pages
 import NavBar from './components/NavBar';
 import Homepage from './pages/Homepage';
+import UseMemo from './pages/useMemo';
 import UseReducer from './pages/useReducer';
 import UseRef from './pages/useRef';
 import UseSate from './pages/useState';
@@ -16,6 +17,8 @@ function App() {
 				return <UseReducer />;
       case '/ref':
         return <UseRef />;
+      case '/memo':
+        return <UseMemo />;
 			default:
 				return <Homepage />;
 		}
