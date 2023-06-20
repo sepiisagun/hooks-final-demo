@@ -5,9 +5,9 @@ function List({ getItems, type }) {
 
 	useEffect(() => {
 		setItems(getItems());
-    console.log(`Fetching items using ${type}`);
+    	console.log(`Fetching items using ${type}`);
 	}, [getItems, type]);
-	return items.map((item) => <div key={item}>{item}</div>);
+	return items.filter((value) => !Number.isNaN(value)).map((item) => <div key={item}>{item}</div>);
 }
 
 export default List;
