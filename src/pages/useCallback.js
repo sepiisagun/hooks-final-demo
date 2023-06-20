@@ -46,7 +46,7 @@ function UseCallBack() {
 		<div className="container">
 			<div className="card">
 				<div className="card-body">
-					<h1>useEffect Demo</h1>
+					<h1>useCallback Demo</h1>
 					<div className="row">
 						<div className="col">
 							<div className="card">

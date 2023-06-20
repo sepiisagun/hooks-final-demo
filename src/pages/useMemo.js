@@ -74,7 +74,7 @@ function UseMemo() {
 		<div className="container">
 			<div className="card">
 				<div className="card-body">
-					<h1>useReducer Demo</h1>
+					<h1>useMemo Demo</h1>
 					<div className="row">
 						<div className="col">
 							<div className="card">
