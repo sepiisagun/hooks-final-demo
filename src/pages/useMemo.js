@@ -36,7 +36,6 @@ function MemoPage({ type }) {
 					type="checkbox"
 					checked={isDark}
 					onChange={(e) => setIsDark(e.target.checked)}
-					onClick={console.log('clicked')} //added console log
 				/>
 				Dark mode
 			</label>
@@ -52,6 +51,7 @@ function MemoPage({ type }) {
 					todos={todos}
 					tab={tab}
 					theme={isDark ? 'black' : 'white'}
+					type={type}
 				/>
 			)}
 		</div>
