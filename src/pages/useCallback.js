@@ -21,22 +21,21 @@ function CallBackPage({ type }) {
 	return (
 		<div className="container" style={theme}>
 			<h6>Uses {type} Function</h6>
-			<div className='container'>
-
-			<input
-				type="number"
-				value={number}
-				onChange={(e) => setNumber(parseInt(e.target.value))}
-			/>
-			<button onClick={() => setDark((prevDark) => !prevDark)}>
-				Toggle theme
-			</button>
-			<List
-				getItems={
-					type === 'Callback' ? getItemsCallback : getItemsRegular
-				}
-				type={type}
-			/>
+			<div className="container">
+				<input
+					type="number"
+					value={number}
+					onChange={(e) => setNumber(parseInt(e.target.value))}
+				/>
+				<button onClick={() => setDark((prevDark) => !prevDark)}>
+					Toggle theme
+				</button>
+				<List
+					getItems={
+						type === 'Callback' ? getItemsCallback : getItemsRegular
+					}
+					type={type}
+				/>
 			</div>
 		</div>
 	);
@@ -45,12 +44,25 @@ function CallBackPage({ type }) {
 function UseCallBack() {
 	return (
 		<div className="container">
-			<div className="row">
-				<div className="col">
-					<CallBackPage type="Callback" />
-				</div>
-				<div className="col">
-					<CallBackPage type="Regular" />
+			<div className="card">
+				<div className="card-body">
+					<h1>useEffect Demo</h1>
+					<div className="row">
+						<div className="col">
+							<div className="card">
+								<div className="card-body">
+									<CallBackPage type="Callback" />
+								</div>
+							</div>
+						</div>
+						<div className="col">
+							<div className="card">
+								<div className="card-body">
+									<CallBackPage type="Regular" />
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

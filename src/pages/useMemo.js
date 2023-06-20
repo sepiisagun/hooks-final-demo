@@ -9,10 +9,14 @@ function MemoPage({ type }) {
 	const [tab, setTab] = useState('all');
 	const [isDark, setIsDark] = useState(false);
 	return (
-		<div className='container'>
+		<div className="container">
 			<h6>Uses {type} function</h6>
 			<div className="container">
-				<button onClick={() => setTab('all')} type="button" class="btn btn-secondary m-1">
+				<button
+					onClick={() => setTab('all')}
+					type="button"
+					class="btn btn-secondary m-1"
+				>
 					All
 				</button>
 				<button
@@ -31,11 +35,11 @@ function MemoPage({ type }) {
 				</button>
 			</div>
 			<br />
-			
+
 			<div class="form-check">
-				<input 
-					className="form-check-input" 
-					type="checkbox"  
+				<input
+					className="form-check-input"
+					type="checkbox"
 					id="flexCheckDefault"
 					checked={isDark}
 					onChange={(e) => setIsDark(e.target.checked)}
@@ -67,13 +71,26 @@ function MemoPage({ type }) {
 
 function UseMemo() {
 	return (
-		<div className='container'>
-			<div className='row'>
-				<div className='col'>
-					<MemoPage type="Memo" />
-				</div>
-				<div className='col'>
-					<MemoPage type="Regular" />
+		<div className="container">
+			<div className="card">
+				<div className="card-body">
+					<h1>useReducer Demo</h1>
+					<div className="row">
+						<div className="col">
+							<div className="card">
+								<div className="card-body">
+									<MemoPage type="Memo" />
+								</div>
+							</div>
+						</div>
+						<div className="col">
+							<div className="card">
+								<div className="card-body">
+									<MemoPage type="Regular" />
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

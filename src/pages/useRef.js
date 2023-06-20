@@ -9,17 +9,29 @@ function UseRef() {
 		console.log(counter.current);
 	};
 	return (
-		<div>
-			<h1>Learn about useRef!</h1>
-			<h2>Ref: {counter.current}</h2>
-			<h3>State: {state}</h3>
-			<div>
-				<button onClick={increaseCounter} type="button" class="btn">
-					Increase Ref
-				</button>
-				<button onClick={() => setState(state + 1)} type="button" class="btn">
-					Increase State
-				</button>
+		<div className="container">
+			<div className="card">
+				<div className="card-body text-center">
+					<h1>useRef Demo</h1>
+					<h2>Ref: {counter.current}</h2>
+					<h3>State: {state}</h3>
+					<div className="container">
+						<button
+							className="btn btn-primary m-1"
+							onClick={increaseCounter}
+							type="button"
+						>
+							Increase Ref
+						</button>
+						<button
+							className="btn btn-secondary m-1"
+							onClick={() => setState(state + 1)}
+							type="button"
+						>
+							Increase State
+						</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

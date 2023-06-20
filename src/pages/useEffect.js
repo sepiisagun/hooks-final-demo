@@ -27,61 +27,66 @@ function UseEffect() {
 		} else if (state.width === 1300) {
 			setColor([...color, 'btn-danger']);
 		}
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [state]); // based on the state, the side effect is that the circles should change colors depending on the current state value
 	return (
 		<div className="container mt-5">
-			<div
-				className="progress"
-				role="progressbar"
-				aria-label="Basic example"
-				aria-valuenow="50"
-				aria-valuemin="0"
-				aria-valuemax="100"
-				style={{ height: '48px' }}
-			>
-				<div
-					className="progress-bar"
-					style={{ width: state.width }}
-				></div>
-			</div>
-			<div className="mt-3 d-flex justify-content-center">
-				<button
-					type="button"
-					className="btn btn-warning"
-					onClick={() => dispatch('plus')}
-				>
-					Increase Progress
-				</button>
-			</div>
-			<div className="mt-5 d-flex justify-content-center">
-				<button
-					type="button"
-					className={`btn ${color[0]} rounded-circle`}
-					disabled
-					style={{
-						height: '256px',
-						width: '256px',
-					}}
-				></button>
-				<button
-					type="button"
-					className={`btn ${color[1]} rounded-circle`}
-					disabled
-					style={{ height: '256px', width: '256px' }}
-				></button>
-				<button
-					type="button"
-					className={`btn ${color[2]} rounded-circle`}
-					disabled
-					style={{ height: '256px', width: '256px' }}
-				></button>
-				<button
-					type="button"
-					className={`btn ${color[3]} rounded-circle`}
-					disabled
-					style={{ height: '256px', width: '256px' }}
-				></button>
+			<div className="card">
+				<div className="card-body">
+					<h1>useEffect Demo</h1>
+					<div
+						className="progress"
+						role="progressbar"
+						aria-label="Basic example"
+						aria-valuenow="50"
+						aria-valuemin="0"
+						aria-valuemax="100"
+						style={{ height: '48px' }}
+					>
+						<div
+							className="progress-bar"
+							style={{ width: state.width }}
+						></div>
+					</div>
+					<div className="mt-3 d-flex justify-content-center">
+						<button
+							type="button"
+							className="btn btn-warning"
+							onClick={() => dispatch('plus')}
+						>
+							Increase Progress
+						</button>
+					</div>
+					<div className="mt-5 d-flex justify-content-center">
+						<button
+							type="button"
+							className={`btn ${color[0]} rounded-circle`}
+							disabled
+							style={{
+								height: '256px',
+								width: '256px',
+							}}
+						></button>
+						<button
+							type="button"
+							className={`btn ${color[1]} rounded-circle`}
+							disabled
+							style={{ height: '256px', width: '256px' }}
+						></button>
+						<button
+							type="button"
+							className={`btn ${color[2]} rounded-circle`}
+							disabled
+							style={{ height: '256px', width: '256px' }}
+						></button>
+						<button
+							type="button"
+							className={`btn ${color[3]} rounded-circle`}
+							disabled
+							style={{ height: '256px', width: '256px' }}
+						></button>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

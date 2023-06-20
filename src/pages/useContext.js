@@ -34,15 +34,23 @@ function UseContext() {
 	return (
 		<MainContext.Provider value={darkTheme}>
 			<div className="container">
-				<button className="btn btn-primary mb-2" onClick={toggleTheme}>
-					Toggle Theme
-				</button>
 				<div className="card">
-					<div className="card-body fw-bold bg-secondary text-white">
-						Container
-						<div className="card-body">
-							<ContextParent1 />
-							<ContextParent2 />
+					<div className="card-body">
+						<h1>useContext Demo</h1>
+						<button
+							className="btn btn-primary mb-2"
+							onClick={toggleTheme}
+						>
+							Toggle Theme
+						</button>
+						<div className="card">
+							<div className="card-body fw-bold bg-secondary text-white">
+								Container
+								<div className="card-body">
+									<ContextParent1 />
+									<ContextParent2 />
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
