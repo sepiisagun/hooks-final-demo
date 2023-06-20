@@ -27,6 +27,7 @@ function UseEffect() {
 		} else if (state.width === 1300) {
 			setColor([...color, 'btn-danger']);
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [state]); // based on the state, the side effect is that the circles should change colors depending on the current state value
 	return (
 		<div className="container mt-5">

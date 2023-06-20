@@ -20,7 +20,7 @@ function CallBackPage({ type }) {
 
 	return (
 		<div className="container" style={theme}>
-			<h>Uses {type} Function</h>
+			<h6>Uses {type} Function</h6>
 			<div className='container'>
 
 			<input
