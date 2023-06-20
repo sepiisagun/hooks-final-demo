@@ -1,7 +1,7 @@
 import { filterTodos } from './utils';
 
-function RegularTodoList({ todos, theme, tab }) {
-    const visibleTodos = filterTodos(todos, tab);
+function RegularTodoList({ todos, theme, tab, type }) {
+    const visibleTodos = filterTodos(todos, tab, type);
 	return (
 		<div style={{ background: `${theme}` }}>
 			<ul>

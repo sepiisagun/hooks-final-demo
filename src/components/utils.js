@@ -10,13 +10,13 @@ export function createTodos() {
 	return todos;
 }
 
-export function filterTodos(todos, tab) {
+export function filterTodos(todos, tab, type) {
 	let startTime = performance.now();
 	while (performance.now() - startTime < 500) {
 		// Do nothing for 500 ms to emulate extremely slow code
 	}
 	return todos.filter((todo) => {
-		console.log('filter render'); //added console log
+		console.log(`filter render using ${type} function`); //added console log
 		if (tab === 'all') {
 			return true;
 		} else if (tab === 'active') {
