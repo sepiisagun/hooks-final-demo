@@ -12,33 +12,40 @@ function MemoPage({ type }) {
 		<div className='container'>
 			<h6>Uses {type} function</h6>
 			<div className="container">
-				<button onClick={() => setTab('all')} type="button" class="btn btn-secondary">
+				<button onClick={() => setTab('all')} type="button" class="btn btn-secondary m-1">
 					All
 				</button>
 				<button
 					onClick={() => setTab('active')}
 					type="button"
-					class="btn btn-secondary "
+					class="btn btn-secondary m-1"
 				>
 					Active
 				</button>
 				<button
 					onClick={() => setTab('completed')}
 					type="button"
-					class="btn btn-secondary"
+					class="btn btn-secondary m-1"
 				>
 					Completed
 				</button>
 			</div>
 			<br />
-			<label>
-				<input
-					type="checkbox"
+			
+			<div class="form-check">
+				<input 
+					className="form-check-input" 
+					type="checkbox"  
+					id="flexCheckDefault"
 					checked={isDark}
 					onChange={(e) => setIsDark(e.target.checked)}
+					onClick={console.log('theme color rendered')}
 				/>
-				Dark mode
-			</label>
+				<label class="form-check-label" for="flexCheckDefault">
+					Dark Mode
+				</label>
+			</div>
+
 			<hr />
 			{type === 'Memo' ? (
 				<MemoTodoList
