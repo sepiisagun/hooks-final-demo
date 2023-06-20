@@ -1,8 +1,8 @@
-import { useMemo } from 'react'
+import { useMemo } from 'react';
 import { filterTodos } from './utils';
 
 function MemoTodoList({ todos, theme, tab }) {
-    const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
+	const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
 	return (
 		<div style={{ background: `${theme}` }}>
 			<p>
@@ -21,4 +21,4 @@ function MemoTodoList({ todos, theme, tab }) {
 	);
 }
 
-export default MemoTodoList
+export default MemoTodoList;
