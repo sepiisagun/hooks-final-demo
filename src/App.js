@@ -2,6 +2,7 @@
 // pages
 import NavBar from './components/NavBar';
 import Homepage from './pages/Homepage';
+import UseContext from './pages/useContext';
 import UseCallBack from './pages/useCallback';
 import UseMemo from './pages/useMemo';
 import UseReducer from './pages/useReducer';
@@ -21,6 +22,8 @@ function App() {
 				return <UseReducer />;
 			case '/ref':
 				return <UseRef />;
+			case '/context':
+				return <UseContext />;
 			case '/memo':
 				return <UseMemo />;
 			case '/callback':

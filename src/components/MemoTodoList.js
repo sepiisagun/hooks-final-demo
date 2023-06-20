@@ -4,12 +4,12 @@ import { filterTodos } from './utils';
 function MemoTodoList({ todos, theme, tab }) {
 	const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
 	return (
-		<div style={{ background: `${theme}` }}>
-			<p>
-				<b>
-					Note: <code>filterTodos</code> is artificially slowed down!
-				</b>
-			</p>
+		<div
+			style={{
+				background: `${theme}`,
+				color: `${theme === 'black' ? 'white' : 'black'}`,
+			}}
+		>
 			<ul>
 				{visibleTodos.map((todo) => (
 					<li key={todo.id}>
