@@ -2,6 +2,7 @@
 // pages
 import NavBar from './components/NavBar';
 import Homepage from './pages/Homepage';
+import UseContext from './pages/useContext';
 import UseMemo from './pages/useMemo';
 import UseReducer from './pages/useReducer';
 import UseRef from './pages/useRef';
@@ -15,10 +16,12 @@ function App() {
 				return <UseSate />;
 			case '/reducer':
 				return <UseReducer />;
-      case '/ref':
-        return <UseRef />;
-      case '/memo':
-        return <UseMemo />;
+			case '/ref':
+				return <UseRef />;
+			case '/context':
+				return <UseContext />;
+			case '/memo':
+				return <UseMemo />;
 			default:
 				return <Homepage />;
 		}
