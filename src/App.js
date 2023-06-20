@@ -7,6 +7,7 @@ import UseMemo from './pages/useMemo';
 import UseReducer from './pages/useReducer';
 import UseRef from './pages/useRef';
 import UseSate from './pages/useState';
+import UseEffect from './pages/useEffect';
 
 function App() {
 	const page = window.location.pathname;
@@ -14,14 +15,16 @@ function App() {
 		switch (page) {
 			case '/state':
 				return <UseSate />;
+			case '/effect':
+				return <UseEffect />;
 			case '/reducer':
 				return <UseReducer />;
-      case '/ref':
-        return <UseRef />;
-      case '/memo':
-        return <UseMemo />;
-      case '/callback':
-        return <UseCallBack />;
+			case '/ref':
+				return <UseRef />;
+			case '/memo':
+				return <UseMemo />;
+			case '/callback':
+				return <UseCallBack />;
 			default:
 				return <Homepage />;
 		}
