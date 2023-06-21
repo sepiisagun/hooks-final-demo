@@ -8,6 +8,7 @@ function Reducer(state, action) {
 			if (maxWidth < 1300) {
 				maxWidth += 162.5;
 			}
+			console.log(maxWidth);
 			return { width: maxWidth };
 		default:
 			throw new Error("what's going on?");
@@ -35,18 +36,44 @@ function UseEffect() {
 			<div className="card">
 				<div className="card-body">
 					<h1>useEffect Demo</h1>
+					<div className="progress-stacked br">
+						<div
+							className="progress"
+							role="progressbar"
+							style={{ width: '325px' }}
+						>
+							<div className="progress-bar bg-secondary"></div>
+						</div>
+						<div
+							className="progress"
+							role="progressbar"
+							style={{ width: '325px' }}
+						>
+							<div className="progress-bar bg-primary"></div>
+						</div>
+						<div
+							className="progress"
+							role="progressbar"
+							style={{ width: '325px' }}
+						>
+							<div className="progress-bar bg-success"></div>
+						</div>
+						<div
+							className="progress"
+							role="progressbar"
+							style={{ width: '325px' }}
+						>
+							<div className="progress-bar bg-danger"></div>
+						</div>
+					</div>
 					<div
 						className="progress"
 						role="progressbar"
-						aria-label="Basic example"
-						aria-valuenow="50"
-						aria-valuemin="0"
-						aria-valuemax="100"
-						style={{ height: '48px' }}
+						style={{ height: '48px', maxWidth: '1300px' }}
 					>
 						<div
-							className="progress-bar"
-							style={{ width: state.width }}
+							className="progress-bar progress-bar-striped progress-bar-animated"
+							style={{ width: state.width, maxWidth: '1300px' }}
 						></div>
 					</div>
 					<div className="mt-3 d-flex justify-content-center">
